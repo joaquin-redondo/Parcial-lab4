@@ -14,7 +14,7 @@ app.use('/books', require('./routes/books'));
 app.use('/authors', require('./routes/authors'));
 
 // mi conexion a mongodb
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect(process.env.MONGO_URI, {
   dbName: 'Libros'
 }).then(() => console.log('conectado a mongodb')).catch(err => console.error(err));
 
